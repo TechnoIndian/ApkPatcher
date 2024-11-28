@@ -17,7 +17,7 @@ Install
 
 **ApkPatcher Method 1**
 
-    curl -L -o ApkPatcher.sh https://github.com/TechnoIndian/setup/releases/download/ApkPatcher/ApkPatcher.sh && chmod +x ApkPatcher.sh && ./ApkPatcher.sh
+    curl -L -o ApkPatcher.sh https://github.com/TechnoIndian/ApkPatcher/releases/download/ApkPatcher/ApkPatcher.sh && chmod +x ApkPatcher.sh && ./ApkPatcher.sh
 
 **ApkPatcher Method 2**
 
