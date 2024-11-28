@@ -55,6 +55,8 @@ Usage
     
 **Mode -h ➸ Help**
 
+    ApkPatcher -h
+
 Note
 ----
 
