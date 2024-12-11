@@ -33,21 +33,57 @@ Usage
 
     ApkPatcher -i YourApkPath.apk
     
-`With Your Certificate ( Input Your pem/ crt / cert Path)`
+`With Your Certificate ( Input Your pem/ crt / cert Path )`
 
     ApkPatcher -i YourApkPath.apk -c certificate.cert
 
 **Mode -i & -f ➸ Flutter SSL & Smali Patcher**
 
     ApkPatcher -i YourApkPath.apk -f
-    
-`With Your Certificate ( Input Your pem/ crt / cert Path)`
+
+`With Your Certificate ( Input Your pem/ crt / cert Path )`
 
     ApkPatcher -i YourApkPath.apk -f -c certificate.cert
+
+**Mode -i & -D ➸ Android ID & Smali Patcher**
+
+`With Your Android ID ( Input Your Custom 16 Digit Android ID )`
+
+    ApkPatcher -i YourApkPath.apk -D 7e9f51f096bd5c83
+
+**Mode -i & -c -D -f ➸ Smali Patcher**
+
+    ApkPatcher -i YourApkPath.apk -D 7e9f51f096bd5c83 -c /sdcard/certificate.cert -f
 
 **Mode -m ➸ Only Merge Apk**
 
     ApkPatcher -m YourApkPath.apk
+
+**Mode -A ➸ AES Logs Inject**
+
+`AES MT Logs Inject`
+
+    ApkPatcher -A YourApkPath.apk
+
+`Do U Want Separate AES.smali Dex`
+
+    ApkPatcher -A YourApkPath.apk -S
+
+**Mode -a ➸ Ads Remove/Patching**
+
+`Ads Remove/Patching`
+
+    ApkPatcher -a YourApkPath.apk
+
+**Mode -r ➸ Random/Fake Device Info**
+
+`Random/Fake Device Info`
+
+    ApkPatcher -r YourApkPath.apk
+
+`With Your Android ID ( Input Your Custom 16 Digit Android ID )`
+
+    ApkPatcher -r YourApkPath.apk -D 7e9f51f096bd5c83
 
 **Mode -C ➸ Credits & Instruction**
 
