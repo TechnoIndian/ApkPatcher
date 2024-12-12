@@ -1,19 +1,13 @@
 from .C_M import CM
 C = CM()
-class FileCheck:
+class F_C_E:
     # Full path to jar & other
     def set_paths(self):
         script_dir = C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]))
-        self.apkeditor_path = C.os.path.join(script_dir, "APKEditor.jar")
-        self.apktool_path = C.os.path.join(script_dir, "APKTool_AP.jar")
-        self.A_F_P = C.os.path.join(C.os.path.expanduser("~"), ".local/AP_Framework")
-        self.A_F = C.os.path.join(C.os.path.expanduser("~"), ".local/AP_Framework", "1.apk")
-        self.key_path = C.os.path.join(script_dir, "testkey.pk8")
-        self.cert_path = C.os.path.join(script_dir, "testkey.x509.pem")
-        self.AES_P = C.os.path.join(C.os.path.dirname(C.os.path.abspath(__file__)), "AES.smali")
+        self.apktool_path = C.os.path.join(script_dir, "APKTool_OR.jar")
 
     # Function to download files
-    def download_file(self, jar_urls_and_paths):
+    def download_file(self, jar_urls_and_paths, isEmulator):
         import requests
         downloaded_urls = set()
         for file_url, local_path in jar_urls_and_paths:
@@ -43,19 +37,12 @@ class FileCheck:
             except requests.exceptions.RequestException:
                 exit(f'\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Got an error while Fetching {C.y}{local_path}\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} No internet Connection\n\n{C.lb}[ {C.rd}INFO {C.lb}]{C.rd} Internet connection is required to download {C.y}{lo_path}\n')
 
-    def F_D(self):
-        jar_urls_and_paths = [
-            ("https://github.com/TechnoIndian/RKPairip/releases/download/Editor/APKEditor.jar", self.apkeditor_path),
-            (("https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool.jar" if C.os.name == 'nt'
-      else "https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool_modified.jar"), self.apktool_path),
-            ("https://github.com/TechnoIndian/ApkTool_Framwork/releases/download/APKTool_2.10.0/testkey.pk8", self.key_path),
-            ("https://github.com/TechnoIndian/ApkTool_Framwork/releases/download/APKTool_2.10.0/testkey.x509.pem", self.cert_path),
-            ("https://raw.githubusercontent.com/TechnoIndian/Objectlogger/refs/heads/main/AES.smali", self.AES_P)
-        ]
-        if C.os.name != 'nt':
-            dir_path = C.os.path.dirname(self.A_F)
-            if not C.os.path.exists(dir_path):
-                C.os.makedirs(dir_path)
-            jar_urls_and_paths.append(("https://github.com/TechnoIndian/ApkTool_Framwork/releases/download/APKTool_2.10.0/1.apk", self.A_F))
-        self.download_file(jar_urls_and_paths)
-        C.os.system('cls' if C.os.name == 'nt' else 'clear')
+    def F_D(self, isEmulator):
+        jar_urls_and_paths = []
+        if isEmulator:
+            jar_urls_and_paths = [
+                (("https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool.jar"), self.apktool_path)
+            ]
+        else:
+            pass
+        self.download_file(jar_urls_and_paths, isEmulator)
