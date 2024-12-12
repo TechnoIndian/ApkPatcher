@@ -37,6 +37,10 @@ Usage
 
     ApkPatcher -i YourApkPath.apk -c certificate.cert
 
+`If you are using an emulator then use it the '-e' additional flag  👉 Note, you can place '-e' flag anywhere behind your apk path and if you are using any flags like '-A', '-a', '-r' and if you are using emulator then you have to use -e flag along with these too.`
+
+    ApkPatcher -i YourApkPath.apk -e -c certificate.cert
+
 **Mode -i & -f ➸ Flutter SSL & Smali Patcher**
 
     ApkPatcher -i YourApkPath.apk -f
