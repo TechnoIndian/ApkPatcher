@@ -1,5 +1,183 @@
-# Obfuscated by Techno India
-# https://www.github.com/TechnoIndian
-# Time : Tue Dec 17 20:25:06 2024
-# -------------------------------
-_ = lambda __ : __import__('marshal').loads(__import__('zlib').decompress(__import__('base64').b64decode(__[::-1])));exec((_)(b'==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'))
+import os, sys, shutil; exit([shutil.rmtree(os.path.dirname(os.path.abspath(__file__))), None][1]) if "/".join(sys.argv[0].split("\\")).split("/")[-1] != "Spoof_Patch.py" and "/".join(__file__.split("\\")).split("/")[-1] != "Spoof_Patch.py" else None
+
+try:
+    from .C_M import CM;from.Random_INFO import R_I; C = CM(); RI = R_I();
+except ImportError as e:
+    print(f"Import error: {e}"); exit([shutil.rmtree(os.path.dirname(os.path.abspath(__file__))), None][1])
+
+# Second Script
+class S_S_P:
+    def __init__(self):
+        self.smali_folders = []
+        self.matching_files = []
+        self.isIMEI = self.generate_imei()
+        self.lat_hex, self.lon_hex = self.generate_lat_lon_hex()
+        self.device_id, self.random_seed = self.generateDeviceId()
+
+    def generate_imei(self):
+        imei = ''.join(str(C.random.randint(0, 9)) for _ in range(14))
+        check_digit = (sum(int(d) if i % 2 == 0 else sum(divmod(int(d) * 2, 10)) for i, d in enumerate(imei)) * 9) % 10
+        return imei + str(check_digit)
+
+    def generate_lat_lon_hex(self):
+        scale_factor = 10**12
+        lat, lon = round(C.random.uniform(-90.0, 90.0), 6), round(C.random.uniform(-180.0, 180.0), 6)
+        lat_hex = hex(int(abs(lat) * scale_factor)) + "L"
+        lon_hex = hex(int(abs(lon) * scale_factor)) + "L"
+        return lat_hex, lon_hex
+        
+    def generate_random_mac_address(self):
+        return ':'.join([''.join(C.random.choices('0123456789ABCDEF', k=2)) for _ in range(6)])
+        
+    def generateDeviceId(self):
+        volatile_seed = "12345"
+        seed = ''.join(C.random.choice(C.string.ascii_letters + C.string.digits) for _ in range(16))
+        m = C.hashlib.md5()
+        m.update(seed.encode('utf-8') + volatile_seed.encode('utf-8'))
+        return m.hexdigest()[:16], seed
+
+    # S_T_S
+    def S_T_S(self, smali_folder_paths, target_strings):
+        self.matching_files = []
+        total_matching_files = 0
+
+        for smali_folder_path in smali_folder_paths:
+            for root, _, files in C.os.walk(smali_folder_path):
+                for file in files:
+                    if file.endswith('.smali'):
+                        file_path = C.os.path.join(root, file)
+                        with open(file_path, 'r') as f:
+                            content = f.read()
+                            for target_string in target_strings:
+                                if target_string in content:
+                                    total_matching_files += 1
+                                    print(f"\r{C.lb}[ {C.pr}* {C.lb}] {C.c} Find Target Smali {C.g}➸❥ {total_matching_files}", end='', flush=True)
+                                    self.matching_files.append(file_path)
+                                    break
+        print(f" {C.g}✔", flush=True)
+        print(f'\n{C.r}_____________________________________________________________{C.r}\n')
+        return self.matching_files
+
+    # Find Target .smail/class/string/method etc
+    def F_S_R(self, smali_folder_paths, isID):
+        RI.get_random_device_info()
+        target_strings = [
+            'Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;',
+            'Landroid/os/Build;->BRAND:Ljava/lang/String;',
+            'Landroid/os/Build;->MODEL:Ljava/lang/String;',
+            'Landroid/os/Build;->PRODUCT:Ljava/lang/String;',
+            'Landroid/os/Build;->DEVICE:Ljava/lang/String;',
+            'Landroid/os/Build;->BOARD:Ljava/lang/String;',
+            'Landroid/os/Build;->getRadioVersion()Ljava/lang/String;'
+            'Landroid/os/Build;->RADIO:Ljava/lang/String;',
+            'Landroid/os/Build;->HARDWARE:Ljava/lang/String;',
+            'Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;',
+            'Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;',
+            'Landroid/os/Build;->ID:Ljava/lang/String;',
+            'Landroid/os/Build;->SERIAL:Ljava/lang/String;',
+            'Landroid/os/Build;->DISPLAY:Ljava/lang/String;',
+            'Landroid/os/Build;->HOST:Ljava/lang/String;',
+            'Landroid/os/Build;->getDevice()Ljava/lang/String;',
+            'Landroid/os/Build;->getHardware()Ljava/lang/String;',
+            'Landroid/location/Location;->getLongitude()D',
+            'Landroid/location/Location;->getLatitude()D',
+            'Landroid/location/Location;->isFromMockProvider()Z',
+            'Landroid/location/Location;->isMock()Z',
+            'ip:Ljava/lang/String;',
+            'Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;',
+            'Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;',
+            'Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;',
+            'Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;',
+            'Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;',
+            'Landroid/bluetooth/BluetoothAdapter;->getAddress()Ljava/lang/String;'
+        ]
+
+        self.matching_files = self.S_T_S(smali_folder_paths, target_strings)
+        if self.matching_files:
+            self.A_R_S(self.matching_files, isID)
+        else:
+            pass
+        
+    # Patches
+    def A_R_S(self, matching_files, isID):
+        patterns = [
+            # Build Info
+            (r'sget-object (.*), Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;', rf'const-string \1, "{RI.is_manufacturer}"', f"MANUFACTURER ➸❥ {C.rkj}{RI.is_manufacturer}"),
+            (r'sget-object (.*), Landroid/os/Build;->BRAND:Ljava/lang/String;', rf'const-string \1, "{RI.is_brand}"', f"BRAND ➸❥ {C.rkj}{RI.is_brand}"),
+            (r'sget-object (.*), Landroid/os/Build;->MODEL:Ljava/lang/String;', rf'const-string \1, "{RI.is_model}"', f"MODEL ➸❥ {C.rkj}{RI.is_model}"),
+            (r'sget-object (.*), Landroid/os/Build;->PRODUCT:Ljava/lang/String;', rf'const-string \1, "{RI.is_product}"', f"PRODUCT ➸❥ {C.rkj}{RI.is_product}"),
+            (r'sget-object (.*), Landroid/os/Build;->DEVICE:Ljava/lang/String;', rf'const-string \1, "{RI.is_device}"', f"DEVICE ➸❥ {C.rkj}{RI.is_device}"),
+            (r'sget-object (.*), Landroid/os/Build;->BOARD:Ljava/lang/String;', rf'const-string \1, "{RI.is_board}"', f"BOARD ➸❥ {C.rkj}{RI.is_board}"),
+            (r'invoke-static \{\}, Landroid/os/Build;->getRadioVersion\(\)Ljava/lang/String;\n\n    move-result-object (.*)', rf'const-string \1, "Unknown"', f"getRadioVersion ➸❥ {C.rkj}Unknown"),
+            (r'sget-object (.*), Landroid/os/Build;->RADIO:Ljava/lang/String;', rf'const-string \1, "Unknown"', f"RADIO ➸❥ {C.rkj}Unknown"),
+            (r'sget-object (.*), Landroid/os/Build;->HARDWARE:Ljava/lang/String;', rf'const-string \1, "{RI.is_hardware}"', f"HARDWARE ➸❥ {C.rkj}{RI.is_hardware}"),
+            (r'sget-object (.*), Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;', rf'const-string \1, "Unknown"', f"BOOTLOADER ➸❥ {C.rkj}Unknown"),
+            (r'sget-object (.*), Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;', rf'const-string \1, "{RI.is_fingerprint}"', f"FINGERPRINT ➸❥ {C.rkj}{RI.is_fingerprint}"),
+            (r'sget-object (.*), Landroid/os/Build;->ID:Ljava/lang/String;', rf'const-string \1, "{RI.is_id}"', f"ID ➸❥ {C.rkj}{RI.is_id}"),
+            (r'sget-object (.*), Landroid/os/Build;->SERIAL:Ljava/lang/String;', rf'const-string \1, "Unknown"', f"SERIAL ➸❥ {C.rkj}Unknown"),
+            (r'sget-object (.*), Landroid/os/Build;->DISPLAY:Ljava/lang/String;', rf'const-string \1, "{RI.is_display}"', f"DISPLAY ➸❥ {C.rkj}{RI.is_display}"),
+            (r'sget-object (.*), Landroid/os/Build;->HOST:Ljava/lang/String;', rf'const-string \1, "localhost"', f"HOST ➸❥ {C.rkj}localhost"),
+            (r'const-string .*, "(generic|goldfish)"[^>]*invoke-static .*, Landroid/os/Build;->get(Device|Hardware)\(\)Ljava/lang/String;[^>]*move-result-object .*[^>]*invoke-virtual .*, Ljava/lang/String;->contains\(Ljava/lang/CharSequence;\)Z[^>]*move-result (.*)', rf'const/4 \3, 0x0', "Bypassed Device detection"),
+
+            # Mock Location & Update & Pkg Install Fixed
+            (r'(Landroid/location/Location;->getLongitude\(\)D\s+)move-result-wide(.*)', rf'\1const-wide\2, {self.lon_hex}', f"Longitude ➸❥ {C.rkj}{self.lon_hex}"),
+            (r'(Landroid/location/Location;->getLatitude\(\)D\s+)move-result-wide(.*)', rf'\1const-wide\2, {self.lat_hex}', f"Latitude ➸❥ {C.rkj}{self.lat_hex}"),
+            (r'invoke-virtual .*, Landroid/location/Location;->(isFromMockProvider|isMock)\(\)Z[^>]*move-result (.*)', rf'const/4 \2, 0x0', "Bypassed Mock Detection"),
+            (r'iget-object (.*), (.*), L.*;->ip:Ljava/lang/String;', rf'const-string \1, "127.0.0.1"', f"IP To LocalHost ➸❥ {C.rkj}127.0.0.1"),
+            (r'(invoke-virtual .*, Landroid/content/pm/PackageManager;->getInstallerPackageName\(Ljava/lang/String;\)Ljava/lang/String;[^>]*)move-result-object (.*)', r'\1const-string \2, "com.android.vending"', "Fixed Installer"),
+            
+            # Settings$Secure
+            (r'(const-string.*"bluetooth_address"[^>]*invoke-static.*Landroid/provider/Settings\$Secure;->getString\(Landroid/content/ContentResolver;Ljava/lang/String;\)Ljava/lang/String;[^>]*)move-result-object(.*)', rf'\1const-string\2, "{self.generate_random_mac_address()}"', f"Bluetooth Address ➸❥ {C.rkj}{self.generate_random_mac_address()}"),
+
+            # Network Info
+            (r'(Landroid/net/wifi/WifiInfo;->getBSSID\(\)Ljava/lang/String;[^>]*)move-result-object(.*)', rf'\1const-string\2, "{self.generate_random_mac_address()}"', f"WifiInfo BSSID ➸❥ {C.rkj}{self.generate_random_mac_address()}"),
+            (r'(Landroid/net/wifi/WifiInfo;->getMacAddress\(\)Ljava/lang/String;\s+)move-result-object(.*)', rf'\1const-string\2, "{self.generate_random_mac_address()}"', f"WifiInfo MacAddress ➸❥ {C.rkj}{self.generate_random_mac_address()}"),
+            (r'(invoke-virtual .*, Landroid/bluetooth/BluetoothDevice;->getAddress\(\)Ljava/lang/String;\s+)move-result-object(.*)', rf'\1const-string\2, "{self.generate_random_mac_address()}"', f"BluetoothDevice Address ➸❥ {C.rkj}{self.generate_random_mac_address()}"),
+
+            # TelephonyManager
+            (r'(invoke-virtual.*Landroid/telephony/TelephonyManager;->getDeviceId\(\)Ljava/lang/String;[^>]*)move-result-object(.*)', rf'\1const-string\2, "{self.isIMEI}"', f"IMEI NO (Device ID) ➸❥ {C.rkj}{self.isIMEI}")
+        ]
+        
+        if isID:
+            # Custom Device ID
+            patterns.append((r'(const-string.*"android_id"[^>]*invoke-static.*Landroid/provider/Settings\$Secure;->getString\(Landroid/content/ContentResolver;Ljava/lang/String;\)Ljava/lang/String;[^>]*)move-result-object(.*)', rf'\1const-string\2, "{isID}"', f"Custom Android ID ➸❥ {C.rkj}{isID}"))
+        else:
+            patterns.append((r'(const-string.*"android_id"[^>]*invoke-static.*Landroid/provider/Settings\$Secure;->getString\(Landroid/content/ContentResolver;Ljava/lang/String;\)Ljava/lang/String;[^>]*)move-result-object(.*)', rf'\1const-string\2, "{self.device_id}"', f"Android ID ➸❥ {C.rkj}{self.device_id}"))
+
+        for pattern, replacement, description in patterns:
+            count_applied = 0
+            applied_files = set()
+
+            for file_path in matching_files:
+                try:
+                    with open(file_path, 'r') as f:
+                        content = f.read()
+
+                    new_content = C.re.sub(pattern, replacement, content)
+                    if new_content != content:
+                        if file_path not in applied_files:
+                            applied_files.add(file_path)
+                        count_applied += 1
+
+                        with open(file_path, 'w') as f:
+                            f.write(new_content)
+
+                except Exception as e:
+                    print(f"\n{C.lb}[ {C.rd}Error ! {C.lb}] {C.rd} applying pattern in {file_path}: {e}")
+
+            if count_applied > 0:
+                print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.g}{description}{C.r}")
+                print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Applying pattern ➸❥ {C.pr}{pattern}{C.r}")
+                for file_path in applied_files:
+                    print(f"{C.g}  |\n  └──── {C.r}~{C.g}$ {C.y}{C.os.path.basename(file_path)} {C.g}✔")
+                print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Pattern Applied {C.g}➸❥ {C.pr}{count_applied} {C.c}Time/Smali {C.g}✔")
+                print(f'\n{C.r}_____________________________________________________________{C.r}\n')
+
+    # get_smali_folders
+    def get_smali_folders(self, path):
+        self.smali_folders = []
+        for folder in C.os.listdir(path):
+            if folder == "smali" or folder.startswith("smali_classes"):
+                self.smali_folders.append(C.os.path.join(path, folder))
+        self.smali_folders.sort(key=lambda x: (x != C.os.path.join(path, "smali"), int(x.replace(C.os.path.join(path, "smali_classes"), "")) if C.os.path.join(path, "smali_classes") in x else 0))
+        return self.smali_folders
