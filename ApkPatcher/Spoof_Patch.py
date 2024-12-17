@@ -54,14 +54,16 @@ class S_S_P:
                 for file in files:
                     if file.endswith('.smali'):
                         file_path = C.os.path.join(root, file)
-                            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                                content = f.read()
-                            for target_string in target_strings:
-                                if target_string in content:
-                                    total_matching_files += 1
-                                    print(f"\r{C.lb}[ {C.pr}* {C.lb}] {C.c} Find Target Smali {C.g}➸❥ {total_matching_files}", end='', flush=True)
-                                    self.matching_files.append(file_path)
-                                    break
+                        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                            content = f.read()
+                    
+                        for target_string in target_strings:
+                            if target_string in content:
+                                total_matching_files += 1
+                                print(f"\r{C.lb}[ {C.pr}* {C.lb}] {C.c} Find Target Smali {C.g}➸❥ {total_matching_files}", end='', flush=True)
+                                self.matching_files.append(file_path)
+                                break
+
         print(f" {C.g}✔", flush=True)
         print(f'\n{C.r}_____________________________________________________________{C.r}\n')
         return self.matching_files
