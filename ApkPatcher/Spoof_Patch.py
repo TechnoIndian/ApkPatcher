@@ -13,6 +13,14 @@ class S_S_P:
         self.isIMEI = self.generate_imei()
         self.lat_hex, self.lon_hex = self.generate_lat_lon_hex()
         self.device_id, self.random_seed = self.generateDeviceId()
+    
+    def find_smali_folders(self, base_folder):
+        self.smali_folders = []
+        for root, dirs, _ in C.os.walk(base_folder):
+            for dir_name in dirs:
+                if dir_name == "smali" or dir_name.startswith("smali_classes"):
+                    self.smali_folders.append(C.os.path.join(root, dir_name))
+        return self.smali_folders
 
     def generate_imei(self):
         imei = ''.join(str(C.random.randint(0, 9)) for _ in range(14))
@@ -46,8 +54,8 @@ class S_S_P:
                 for file in files:
                     if file.endswith('.smali'):
                         file_path = C.os.path.join(root, file)
-                        with open(file_path, 'r') as f:
-                            content = f.read()
+                            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                                content = f.read()
                             for target_string in target_strings:
                                 if target_string in content:
                                     total_matching_files += 1
@@ -150,7 +158,7 @@ class S_S_P:
 
             for file_path in matching_files:
                 try:
-                    with open(file_path, 'r') as f:
+                    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                         content = f.read()
 
                     new_content = C.re.sub(pattern, replacement, content)
@@ -159,7 +167,7 @@ class S_S_P:
                             applied_files.add(file_path)
                         count_applied += 1
 
-                        with open(file_path, 'w') as f:
+                        with open(file_path, "w", encoding="utf-8", errors="ignore") as f:
                             f.write(new_content)
 
                 except Exception as e:
@@ -172,12 +180,3 @@ class S_S_P:
                     print(f"{C.g}  |\n  └──── {C.r}~{C.g}$ {C.y}{C.os.path.basename(file_path)} {C.g}✔")
                 print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Pattern Applied {C.g}➸❥ {C.pr}{count_applied} {C.c}Time/Smali {C.g}✔")
                 print(f'\n{C.r}_____________________________________________________________{C.r}\n')
-
-    # get_smali_folders
-    def get_smali_folders(self, path):
-        self.smali_folders = []
-        for folder in C.os.listdir(path):
-            if folder == "smali" or folder.startswith("smali_classes"):
-                self.smali_folders.append(C.os.path.join(path, folder))
-        self.smali_folders.sort(key=lambda x: (x != C.os.path.join(path, "smali"), int(x.replace(C.os.path.join(path, "smali_classes"), "")) if C.os.path.join(path, "smali_classes") in x else 0))
-        return self.smali_folders
