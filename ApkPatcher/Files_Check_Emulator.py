@@ -1,48 +1,33 @@
-from .C_M import CM
-C = CM()
+from.C_M import CM
+C=CM()
 class F_C_E:
-    # Full path to jar & other
-    def set_paths(self):
-        script_dir = C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]))
-        self.apktool_path = C.os.path.join(script_dir, "APKTool_OR.jar")
-
-    # Function to download files
-    def download_file(self, jar_urls_and_paths, isEmulator):
-        import requests
-        downloaded_urls = set()
-        for file_url, local_path in jar_urls_and_paths:
-            lo_path = C.os.path.basename(local_path)
-            if C.os.path.exists(local_path) or file_url in downloaded_urls:
-                continue
-            try:
-                print(f"{C.lb}[ {C.pr}Downloading {C.lb}] {C.c}{lo_path}", end='', flush=True)
-                response = requests.get(file_url, stream=True, timeout=10)
-
-                if response.status_code == 200:
-                    total_size = int(response.headers.get('content-length', 0))
-                    block_size = 1024
-                    downloaded = 0
-                    with open(local_path, 'wb') as f:
-                        for data in response.iter_content(block_size):
-                            downloaded += len(data)
-                            f.write(data)
-                            progress = downloaded / total_size * 100 if total_size > 0 else 0
-                            mb_downloaded = downloaded / (1024 * 1024)
-                            total_mb = total_size / (1024 * 1024) if total_size > 0 else 0
-                            progress_line = f"\r{C.lb}[ {C.pr}Downloading {C.lb}] {C.c}{lo_path}{C.g} ➸❥  {progress:.2f}% ({mb_downloaded:.2f}/{total_mb:.2f} MB)"
-                            print(progress_line, end='\r')
-                    print(f"\n{C.g}       |\n       └──── {C.r}Downloaded ~{C.g}$ {lo_path} Successfully. ✔\n")
-                else:
-                    exit(f'\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Failed to download {C.y}{lo_path} {C.rd}Status Code: {response.status_code}\n\n{C.lb}[ {C.rd}INFO {C.lb}]{C.rd} Restart Script...{C.r}\n')
-            except requests.exceptions.RequestException:
-                exit(f'\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Got an error while Fetching {C.y}{local_path}\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} No internet Connection\n\n{C.lb}[ {C.rd}INFO {C.lb}]{C.rd} Internet connection is required to download {C.y}{lo_path}\n')
-
-    def F_D(self, isEmulator):
-        jar_urls_and_paths = []
-        if isEmulator:
-            jar_urls_and_paths = [
-                (("https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool.jar"), self.apktool_path)
-            ]
-        else:
-            pass
-        self.download_file(jar_urls_and_paths, isEmulator)
+	def set_paths(A):B=C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]));A.apktool_path=C.os.path.join(B,'APKTool_OR.jar')
+	def calculate_checksum(E,file_path):
+		A=C.hashlib.sha256()
+		try:
+			with open(file_path,'rb')as B:
+				for D in iter(lambda:B.read(4096),b''):A.update(D)
+			return A.hexdigest()
+		except FileNotFoundError:return
+	def download_file(I,jar_urls_and_paths):
+		import requests as G;S=set()
+		for(J,A,K)in jar_urls_and_paths:
+			B=C.os.path.basename(A)
+			if C.os.path.exists(A):
+				L=I.calculate_checksum(A)
+				if L==K:continue
+				else:print(f"{C.rd}[ {C.pr}File {C.rd}] {C.c}{B} {C.rd}is Corrupt (Checksum Mismatch).\n\n{C.lb}[ {C.y}INFO ! {C.lb}]{C.rd} Re-Downloading, Need Internet Connection.{C.r}\n");C.os.remove(A)
+			try:
+				print(f"\n{C.lb}[ {C.pr}Downloading {C.lb}] {C.c}{B}",end='',flush=True);D=G.get(J,stream=True,timeout=10)
+				if D.status_code==200:
+					E=int(D.headers.get('content-length',0));M=1024;F=0
+					with open(A,'wb')as N:
+						for H in D.iter_content(M):F+=len(H);N.write(H);O=F/E*100 if E>0 else 0;P=F/(1024*1024);Q=E/(1024*1024)if E>0 else 0;R=f"\r{C.lb}[ {C.pr}Downloading {C.lb}] {C.c}{B} {C.g}➸❥ {O:.2f}% ({P:.2f}/{Q:.2f} MB)";print(R,end='\r')
+					print(f"\n{C.g}       |\n       └──── {C.r}Downloaded ~{C.g}$ {B} Successfully. ✔\n")
+				else:exit(f'\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Failed to download {C.y}{B} {C.rd}Status Code: {D.status_code}\n\n{C.lb}[ {C.y}INFO ! {C.lb}]{C.rd} Restart Script...{C.r}\n')
+			except G.exceptions.RequestException:exit(f'\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Got an error while Fetching {C.y}{A}\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} No internet Connection\n\n{C.lb}[ {C.y}INFO ! {C.lb}]{C.rd} Internet Connection is Required to Download {C.y}{B}\n')
+	def F_D(A,isEmulator):
+		B=isEmulator;D=[]
+		if B:D=[('https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool.jar',A.apktool_path,'c0350abbab5314248dfe2ee0c907def4edd14f6faef1f5d372d3d4abd28f0431')]
+		else:0
+		A.download_file(D,B);C.os.system('cls'if C.os.name=='nt'else'clear')
