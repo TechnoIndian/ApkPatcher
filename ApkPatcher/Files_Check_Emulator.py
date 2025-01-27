@@ -28,6 +28,6 @@ class F_C_E:
 			except G.exceptions.RequestException:exit(f'\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Got an error while Fetching {C.y}{A}\n\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} No internet Connection\n\n{C.lb}[ {C.y}INFO ! {C.lb}]{C.rd} Internet Connection is Required to Download {C.y}{B}\n')
 	def F_D(A,isEmulator):
 		B=[]
-		if isEmulator:B=[('https://github.com/TechnoIndian/RKPairip/releases/download/Editor/apktool.jar',A.apktool_path,'c0350abbab5314248dfe2ee0c907def4edd14f6faef1f5d372d3d4abd28f0431')]
+		if isEmulator:B=[('https://github.com/TechnoIndian/ApkTool_Framwork/releases/download/APKTool_2.10.0/apktool.jar',A.apktool_path,'8fdc17c6fe2e6d80d71b8718eb2a5d0379f1cc7139ae777f6a499ce397b26f54')]
 		else:0
 		A.download_file(B)
