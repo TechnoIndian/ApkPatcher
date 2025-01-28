@@ -1,7 +1,7 @@
 from.C_M import CM
 C=CM()
 class FileCheck:
-	def set_paths(A):B=C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]));A.apkeditor_path=C.os.path.join(B,'APKEditor.jar');A.apktool_path=C.os.path.join(B,'APKTool_AP.jar');A.Sign_Jar=C.os.path.join(B,'Uber-Apk-Signer.jar');A.A_F_P=C.os.path.join(C.os.path.expanduser('~'),'.local/AP_Framework');A.AES_P=C.os.path.join(C.os.path.dirname(C.os.path.abspath(__file__)),'AES.smali')
+	def set_paths(A):B=C.os.path.dirname(C.os.path.abspath(C.sys.argv[0]));A.apkeditor_path=C.os.path.join(B,'APKEditor.jar');A.apktool_path=C.os.path.join(B,'APKTool_AP.jar');A.Sign_Jar=C.os.path.join(B,'Uber-Apk-Signer.jar');A.AES_P=C.os.path.join(C.os.path.dirname(C.os.path.abspath(__file__)),'AES.smali')
 	def calculate_checksum(E,file_path):
 		A=C.hashlib.sha256()
 		try:
