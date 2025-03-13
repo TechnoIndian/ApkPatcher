@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ApkPatcher",
-    version="2.1",
+    version="2.2",
     author="RK_TECHNO_INDIA",
     author_email="TechnoIndia555@gmail.com",
     description="ApkPatcher Fix installation Error, Smali Patcher, Remove VPN Detect & SSL Bypass",
