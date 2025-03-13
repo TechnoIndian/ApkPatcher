@@ -63,21 +63,21 @@ Usage
 
     ApkPatcher -m YourApkPath.apk
 
-**Mode -A ➸ AES Logs Inject**
+**Mode -L ➸ AES Logs Inject**
 
 `AES MT Logs Inject`
 
-    ApkPatcher -A YourApkPath.apk
+    ApkPatcher -L YourApkPath.apk
 
 `Do U Want Separate AES.smali Dex`
 
-    ApkPatcher -A YourApkPath.apk -S
+    ApkPatcher -L YourApkPath.apk -S
 
 **Mode -a ➸ Ads Remove/Patching**
 
 `Ads Remove/Patching`
 
-    ApkPatcher -a YourApkPath.apk
+    ApkPatcher -rm YourApkPath.apk
 
 **Mode -r ➸ Random/Fake Device Info**
 
