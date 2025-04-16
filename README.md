@@ -37,6 +37,10 @@ Usage
 
     ApkPatcher -i YourApkPath.apk -c certificate.cert
 
+`Multiple Certificate`
+
+    ApkPatcher -i YourApkPath.apk -c /sdcard/HttpCanary/certs/HttpCanary.pem /sdcard/Download/Reqable/reqable-ca.crt /sdcard/Download/ProxyPinCA.crt
+
 `If you are using an emulator then use it the '-e' additional flag  👉 Note, you can place '-e' flag anywhere behind your apk path and if you are using any flags like '-A', '-a', '-r' and if you are using emulator then you have to use -e flag along with these too.`
 
     ApkPatcher -i YourApkPath.apk -e -c certificate.cert
@@ -58,6 +62,18 @@ Usage
 **Mode -i & -c -D -f ➸ Smali Patcher**
 
     ApkPatcher -i YourApkPath.apk -D 7e9f51f096bd5c83 -c /sdcard/certificate.cert -f
+
+**Mode -i & -p Pairip SSL Bypass**
+
+    ApkPatcher -i YourApkPath.apk -p
+
+**Mode -i & -P ➸ Purchase/Paid/Price**
+
+    ApkPatcher -i YourApkPath.apk -P
+
+**Mode -i & -skip ➸ Skip Patch (e.g., getAcceptedIssuers)**
+
+    ApkPatcher -i YourApkPath.apk -skip getAcceptedIssuers
 
 **Mode -m ➸ Only Merge Apk**
 
