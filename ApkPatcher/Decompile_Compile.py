@@ -11,8 +11,8 @@ F.set_paths()
 F.isEmulator()
 class De_Compiler:
 	def decompile_apk(H,apk_path,decompile_dir,isEmulator,isAPKEditor):
-		D=isAPKEditor;B=decompile_dir;A=apk_path;E=F.apktool_path_e if isEmulator else F.apktool_path;print(f"\n{C.r}_____________________________________________________________\n")
-		if D:G=[_A,_B,F.apkeditor_path,'d',_C,'-no-dex-debug','-i',A,_D,B];print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Decompile with APKEditor...");print(f"{C.g}  |\n  └──── {C.r}Decompiling ~{C.g}$ java -jar {C.os.path.basename(F.apkeditor_path)} d -f -no-dex-debug -i {A} -o {C.os.path.basename(B)}\n")
+		D=isAPKEditor;B=decompile_dir;A=apk_path;E=F.APKTool_Path_E if isEmulator else F.APKTool_Path;print(f"\n{C.r}_____________________________________________________________\n")
+		if D:G=[_A,_B,F.APKEditor_Path,'d',_C,'-no-dex-debug','-i',A,_D,B];print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Decompile with APKEditor...");print(f"{C.g}  |\n  └──── {C.r}Decompiling ~{C.g}$ java -jar {C.os.path.basename(F.APKEditor_Path)} d -f -no-dex-debug -i {A} -o {C.os.path.basename(B)}\n")
 		else:G=[_A,_B,E,'d',_C,'--only-main-classes',A,_D,B,'-p',B];print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Decompiling APK...");print(f"{C.g}  |\n  └──── {C.r}Decompiling ~{C.g}$ java -jar {C.os.path.basename(E)} d -f {A} -o {C.os.path.basename(B)}\n")
 		print(f"{C.r}_____________________________________________________________{C.g}\n")
 		try:C.subprocess.run(G,check=_E);print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Decompile Successful  {C.g}✔{C.r}\n");print(f"{C.r}_____________________________________________________________\n\n")
@@ -20,9 +20,9 @@ class De_Compiler:
 			if not D:print(f"\n{C.lb}[ {C.rd}Error ! {C.lb}] {C.rd} Decompile Failed ! ✘{C.r}\n");print(f"{C.r}_____________________________________________________________\n");exit(f"\n{C.lb}[ {C.y}Suggest ! {C.lb}]{C.c} Try With APKEditor, Flag {C.g}-a\n     |\n     └──── {C.r}~ Ex. {C.g}$ {C.rkj}ApkPatcher -i {C.y}{A} {C.g}-a\n")
 			exit(f"\n{C.lb}[ {C.rd}Error ! {C.lb}] {C.rd} Decompile Failed ! ✘{C.r}\n");return None,None
 	def recompile_apk(H,decompile_dir,apk_path,build_dir,isEmulator,isAPKEditor):
-		G='b';B=decompile_dir;A=build_dir;E=F.apktool_path_e if isEmulator else F.apktool_path
+		G='b';B=decompile_dir;A=build_dir;E=F.APKTool_Path_E if isEmulator else F.APKTool_Path
 		if isAPKEditor:
-			D=[_A,_B,F.apkeditor_path,G,'-i',B,_D,A,_C];print(f"{C.r}_____________________________________________________________\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Recompile APK...");print(f"{C.g}  |\n  └──── {C.r}Recompiling ~{C.g}$ java -jar {C.os.path.basename(F.apkeditor_path)} b -i {C.os.path.basename(B)} -o {C.os.path.basename(A)} -f\n");print(f"{C.r}_____________________________________________________________{C.g}\n")
+			D=[_A,_B,F.APKEditor_Path,G,'-i',B,_D,A,_C];print(f"{C.r}_____________________________________________________________\n");print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Recompile APK...");print(f"{C.g}  |\n  └──── {C.r}Recompiling ~{C.g}$ java -jar {C.os.path.basename(F.APKEditor_Path)} b -i {C.os.path.basename(B)} -o {C.os.path.basename(A)} -f\n");print(f"{C.r}_____________________________________________________________{C.g}\n")
 			try:C.subprocess.run(D,check=_E);print(f"\n{C.lb}[ {C.pr}* {C.lb}] {C.c} Recompile Successful  {C.g}✔{C.r}\n");print(f"{C.r}_____________________________________________________________\n")
 			except C.subprocess.CalledProcessError:exit(f"\n{C.lb}[ {C.rd}Error ! {C.lb}]{C.rd} Recompile Failed with APKEditor ! ✘{C.r}\n")
 		else:
