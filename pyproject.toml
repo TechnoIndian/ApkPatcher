@@ -38,16 +38,14 @@ apkpatcher = "ApkPatcher.APK_PATCHER:RK_Techno_IND"
 [tool.setuptools]
 include-package-data = true
 
-[tool.setuptools.package-data]
-"ApkPatcher" = ["AES.smali", "lib_Pairip_CoreX.so"]
+packages.find = {}
+
+package-data = { "ApkPatcher" = ["AES.smali", "lib_Pairip_CoreX.so"] }
 
 [project.urls]
 Homepage = "https://github.com/TechnoIndian/ApkPatcher"
 Repository = "https://github.com/TechnoIndian/ApkPatcher.git"
 Issues = "https://github.com/TechnoIndian/ApkPatcher/issues"
-
-[tool.setuptools]
-packages.find = {}
 
 [tool.setuptools.dynamic]
 version = { file = "VERSION" }
