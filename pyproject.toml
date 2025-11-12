@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ApkPatcherX"
+dynamic = ["version"]
+authors = [
+  { name = "RK_TECHNO_INDIA", email = "TechnoIndian786@gmail.com" }
+]
+
+description = "Smali Patcher ( Bypass 𒁍 SSL & Flutter SSL, VPN, USB Debugging, Screen Restrict, One Device Login, Spoof Info & Package Detection, Ads, AES Logs Inject )"
+
+license = { text = "MIT" }
+readme = "README.md"
+
+requires-python = ">=3.12"
+
+dependencies = [
+  "requests",
+  "r2pipe",
+  "asn1crypto",
+  "multiprocess"
+]
+
+keywords = ["ApkPatcher"]
+
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+ApkPatcher = "ApkPatcher.APK_PATCHER:RK_Techno_IND"
+apkpatcher = "ApkPatcher.APK_PATCHER:RK_Techno_IND"
+
+[tool.setuptools]
+include-package-data = true
+
+packages.find = {}
+
+package-data = { "ApkPatcher" = ["AES.smali", "lib_Pairip_CoreX.so"] }
+
+[project.urls]
+Homepage = "https://github.com/TechnoIndian/ApkPatcher"
+Repository = "https://github.com/TechnoIndian/ApkPatcher.git"
+Issues = "https://github.com/TechnoIndian/ApkPatcher/issues"
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
