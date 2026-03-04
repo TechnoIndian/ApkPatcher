@@ -1,0 +1,84 @@
+{
+    "com.pinehook.plus.MainActivity": {
+        "argMethod": {
+            "paramTypes": [
+                "boolean"
+            ],
+            "before": {
+                "args": [
+                    false
+                ],
+                "result": true
+            },
+            "after": {
+                "result": false
+            }
+        },
+        "anotherMethod": {
+            "paramTypes": [
+                "int"
+            ],
+            "before": {
+                "args": [
+                    100
+                ],
+                "result": 200
+            },
+            "after": {
+                "result": 300
+            }
+        },
+        "yetAnotherMethod": {
+            "before": {
+                "result": true
+            },
+            "after": {
+                "result": false
+            }
+        },
+        "beforeOnlyMethod": {
+            "paramTypes": [
+                "java.lang.String"
+            ],
+            "before": {
+                "args": [
+                    "modifiedBefore"
+                ]
+            }
+        },
+        "afterOnlyMethod": {
+            "paramTypes": [
+                "java.lang.String"
+            ],
+            "after": {
+                "result": "modifiedAfter"
+            }
+        }
+    },
+    "com.pinehook.plus.ConstructorClass": {
+        "constructor": {
+            "paramTypes": [
+                "boolean",
+                "java.lang.String",
+                "boolean",
+                "long",
+                "long",
+                "java.lang.String",
+                "java.lang.String",
+                "java.lang.String"
+            ],
+            "before": {
+                "args": [
+                    true,
+                    "PlayStore",
+                    false,
+                    0,
+                    0,
+                    "null",
+                    "Yearly",
+                    "null"
+                ]
+            }
+        }
+    }
+}
