@@ -205,7 +205,9 @@ def Copy_AES_Smali(decompile_dir, smali_folders, manifest_path, isAES_MS, isAlgo
 
     prefix = "classes" if isAPKEditor else "smali_classes"
 
-    idx = int(M.os.path.basename(smali_folders[-1])[len(prefix):]) + 1
+    name = M.os.path.basename(smali_folders[-1])[len(prefix):]
+
+    idx = int(name) + 1 if name.isdigit() else 2
 
     if isAES_MS:
 
