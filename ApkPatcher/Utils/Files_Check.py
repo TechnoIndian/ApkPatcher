@@ -125,14 +125,14 @@ class FileCheck:
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKEditor.jar",
                     self.APKEditor_Path,
-                    "bec1dd156850df8392c9a45a735b86ae71bc913325ee029ffbb4080a8b41ca1c"
+                    "026906af28497577496a3e1f5054a878a7cf9c1b3889626882d87ea88d09c20f"
                 ),
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool.jar" if M.os.name == 'nt' else "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool_Termux.jar",
 
                     self.APKTool_Path,
 
-                    "b947b945b4bc455609ba768d071b64d9e63834079898dbaae15b67bf03bcd362" if M.os.name == 'nt' else "c66797f991173e7e71150f41c936c8e9389a73be76929247efcc562ef2a78da0"
+                    "eee4669a704a14e0623407e6701b0b91887e61e1e4049cb7a82833e14ae8b5fd" if M.os.name == 'nt' else "9a3b505e2e75566e831ef7b236c6e8733cde842b341ad1655fd1cfbf513e84e9"
                 ),
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/Uber-Apk-Signer.jar",
@@ -195,7 +195,7 @@ class FileCheck:
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool.jar",
                     self.APKTool_Path_E,
-                    "b947b945b4bc455609ba768d071b64d9e63834079898dbaae15b67bf03bcd362"
+                    "eee4669a704a14e0623407e6701b0b91887e61e1e4049cb7a82833e14ae8b5fd"
                 )
             ]
         )
