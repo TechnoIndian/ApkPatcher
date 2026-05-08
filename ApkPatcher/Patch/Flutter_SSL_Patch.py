@@ -80,12 +80,14 @@ def find_offset(r2, patterns, is_iA=False):
         for arch in patterns:
             for pattern in patterns[arch] + patterns2[arch]:
 
-                isX509_verify_cert = (pattern == patterns2[arch])
+                isX509_verify_cert = pattern in patterns2[arch]
 
                 search_result = r2.cmd(f"/x {pattern}")
                 search_result = search_result.strip().split(" ")[0]
 
                 if search_result:
+                    print(f"\n{C.X}{C.C} Matched Pattern\n  |\n  ╰┈➢ {C.PN} {pattern}\n")
+
                     search_fcn = r2.cmd(f"{search_result};afl.").strip().split(" ")[0]
 
                     if isX509_verify_cert:
