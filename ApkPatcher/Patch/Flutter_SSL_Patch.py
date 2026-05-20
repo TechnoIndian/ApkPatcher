@@ -119,6 +119,27 @@ def Patch_Flutter_SSL(decompile_dir, isAPKEditor):
 
     if lib_so_path:
         print(f"\n{C.S} Found {C.E} {C.OG}➸❥ {C.Y}{arch}/{M.os.path.basename(lib_so_path)} {C.G} ✔\n")
+
+        # ---------------- Detect Flutter Dart Version ----------------
+        with open(lib_so_path, "rb") as so_file:
+
+            read = so_file.read().decode(
+                "ascii",
+                errors="ignore"
+            ).replace("\x00", "")
+
+            if " (stable)" in read:
+                version_code = (
+                    M.re.findall(
+                        r"\d+\.\d+\.\d+",
+                        read[:read.find(" (stable)")]
+                    ) or ["Unknown"]
+                )[-1]
+            else:
+                version_code = "Unknown"
+
+            print(f"\n{C.S} Flutter Dart Version {C.E} {C.OG}➸❥  {C.PN}{version_code}  {C.G}✔\n")
+
     else:
         exit(f"\n{C.ERROR} libflutter.so not found in any of the specified architectures {architectures}\n")
 
@@ -139,11 +160,14 @@ def Patch_Flutter_SSL(decompile_dir, isAPKEditor):
 
     print(f"\n{C.X}{C.G} Searching for offset...\n")
 
-    offset, patch_cmd = find_offset(r2, patterns, is_iA)
+    result = find_offset(r2, patterns, is_iA)
 
-    if offset:
+    if result:
+        offset, patch_cmd = result
+
         r2.cmd(f"{offset}")
         r2.cmd(patch_cmd)
+
         print(f"\n{C.X}{C.C} ssl_verify_peer_cert: {C.G}Patched Successfully  ✔\n")
 
     else:

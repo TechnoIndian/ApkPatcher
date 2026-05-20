@@ -125,7 +125,7 @@ class FileCheck:
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKEditor.jar",
                     self.APKEditor_Path,
-                    "026906af28497577496a3e1f5054a878a7cf9c1b3889626882d87ea88d09c20f"
+                    "a9cd40df818845456be6d696de6110c89edf4b0a0580cb83438ed6b25a366e67"
                 ),
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool.jar" if M.os.name == 'nt' else "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool_Termux.jar",
