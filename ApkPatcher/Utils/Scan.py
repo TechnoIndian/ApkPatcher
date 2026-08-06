@@ -15,16 +15,19 @@ def Scan_Apk(apk_path, isFlutter, isPairip):
 
     Package_Name = ''
 
+    # ---------------- Extract Package Name with AAPT ----------------
     if M.os.name == 'posix':
-        # ---------------- Extract Package Name with AAPT ----------------
-        Package_Name = M.subprocess.run(
-            ['aapt', 'dump', 'badging', apk_path],
-            capture_output=True, text=True
-        ).stdout.split("package: name='")[1].split("'")[0]
+        try:
+            Package_Name = M.subprocess.run(
+                ['aapt2', 'dump', 'packagename', apk_path],
+                capture_output=True, text=True
+            ).stdout.strip()
 
-        if Package_Name:
-            print(f"\n{C.S} Package Name {C.E} {C.OG}➸❥ {C.P}'{C.G}{Package_Name}{C.P}' {C.G} ✔")
+            if Package_Name:
+                print(f"\n{C.S} Package Name {C.E} {C.OG}➸❥ {C.P}'{C.G}{Package_Name}{C.P}' {C.G} ✔")
 
+        except Exception:
+            Package_Name = ''
 
     # ---------------- Extract Package Name with APKEditor ----------------
     if not Package_Name:
@@ -34,7 +37,6 @@ def Scan_Apk(apk_path, isFlutter, isPairip):
         ).stdout.split('"')[1]
 
         print(f"\n{C.S} Package Name {C.E} {C.OG}➸❥ {C.P}'{C.G}{Package_Name}{C.P}' {C.G} ✔")
-
 
     
     # ---------------- Check Flutter / Pairip Protection ----------------

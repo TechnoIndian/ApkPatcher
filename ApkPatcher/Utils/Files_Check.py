@@ -132,7 +132,7 @@ class FileCheck:
 
                     self.APKTool_Path,
 
-                    "eee4669a704a14e0623407e6701b0b91887e61e1e4049cb7a82833e14ae8b5fd" if M.os.name == 'nt' else "9a3b505e2e75566e831ef7b236c6e8733cde842b341ad1655fd1cfbf513e84e9"
+                    "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423" if M.os.name == 'nt' else "0ac5be78edd13772b3d8e261548e5b7f7d2579310c078476e12b8c91341ea5dc"
                 ),
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/Uber-Apk-Signer.jar",
@@ -195,7 +195,7 @@ class FileCheck:
                 (
                     "https://github.com/TechnoIndian/Tools/releases/download/Tools/APKTool.jar",
                     self.APKTool_Path_E,
-                    "eee4669a704a14e0623407e6701b0b91887e61e1e4049cb7a82833e14ae8b5fd"
+                    "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423"
                 )
             ]
         )

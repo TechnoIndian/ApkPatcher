@@ -57,7 +57,7 @@ def check_dependencies():
                 f'\n{C.INFO} Verify Java Installation {C.G} java --version\n'
             )
 
-    if M.os.name == 'posix': install_package('aapt')
+    if M.os.name == 'posix': install_package('aapt2')
 
 
 # ---------------- Install Package ---------------
