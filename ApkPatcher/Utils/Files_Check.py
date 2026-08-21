@@ -21,9 +21,9 @@ class FileCheck:
     def Set_Path(self):
 
         # ---------------- Jar Tools ----------------
-        self.APKTool_Path, self.APKEditor_Path, self.Sign_Jar = (
+        self.APKTool_Path, self.APKEditor_Path, self.ApkSig = (
             M.os.path.join(run_dir, jar)
-            for jar in ("APKTool.jar", "APKEditor.jar", "Uber-Apk-Signer.jar")
+            for jar in ("APKTool.jar", "APKEditor.jar", "ApkSig.jar")
         )
 
         # ---------------- HooK Files ----------------
@@ -135,9 +135,9 @@ class FileCheck:
                     "dbf930b076c6b9be08d57c449cacefc3bdd6b71ebd59b3066fc0e1f5b14f9423" if M.os.name == 'nt' else "0ac5be78edd13772b3d8e261548e5b7f7d2579310c078476e12b8c91341ea5dc"
                 ),
                 (
-                    "https://github.com/TechnoIndian/Tools/releases/download/Tools/Uber-Apk-Signer.jar",
-                    self.Sign_Jar,
-                    "e1299fd6fcf4da527dd53735b56127e8ea922a321128123b9c32d619bba1d835"
+                    "https://github.com/TechnoIndian/Tools/releases/download/Tools/ApkSig.jar",
+                    self.ApkSig,
+                    "ac8a3dc7a9fa516408a320e68f57e13416887827e6d58c086009e9374b771e55"
                 ),
                 (
                     "https://raw.githubusercontent.com/TechnoIndian/Objectlogger/refs/heads/main/AES.smali",

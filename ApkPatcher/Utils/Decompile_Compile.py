@@ -160,12 +160,12 @@ def FixSigBlock(decompile_dir, apk_path, build_dir, rebuild_dir):
 # ---------------- Sign APK ----------------
 def Sign_APK(build_dir):
 
-    cmd = ["java", "-jar", F.Sign_Jar, "-a", build_dir, "--overwrite"]
+    cmd = ["java", "-jar", F.ApkSig, build_dir]
 
     print(f"\n{C.X}{C.C} Signing APK...")
 
     print(
-        f"{C.G}  |\n  └──── {C.CC}Signing ~{C.G}$ java -jar {M.os.path.basename(F.Sign_Jar)} -a {build_dir} --overwrite\n"
+        f"{C.G}  |\n  └──── {C.CC}Signing ~{C.G}$ java -jar {M.os.path.basename(F.ApkSig)} {build_dir}\n"
         f"\n{C_Line}{C.G}\n"
     )
 
@@ -173,11 +173,6 @@ def Sign_APK(build_dir):
         M.subprocess.run(cmd, check=True)
 
         print(f"\n{C.X}{C.C} Sign Successful {C.G} ✔\n")
-
-        idsig_file = build_dir + ".idsig"
-
-        if M.os.path.exists(idsig_file):
-            M.os.remove(idsig_file)
 
         print(f'{C_Line}\n\n')
 

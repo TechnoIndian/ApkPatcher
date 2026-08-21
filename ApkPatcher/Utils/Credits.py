@@ -16,7 +16,7 @@ def Credits():
 
 {C.S} APKEditor {C.E}{C.G} REAndroid {C.S}{C.P} @kikfox {C.E}
 
-{C.S} Uber-Apk-Signer {C.E}{C.G} Patrick Favre {C.S}{C.P} @patrickfav {C.E}
+{C.S} ApkSig {C.E}{C.G} Android Tools Build {C.S}{C.P} Open Source {C.E}
 
 {C.S} My Channel {C.E}{C.CC} 🇮🇳 ࿗ {C.OG}T̴͢͢e̴͢͢c̴͢͢h̴͢͢n̴͢͢o̴͢͢ {C.B}☣{C.G} I̴͢͢n̴͢͢d̴͢͢i̴͢͢a̴͢͢ {C.CC}࿗ 🇮🇳 {C.S}{C.P} @rktechnoindians {C.E}
 

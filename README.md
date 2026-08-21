@@ -13,6 +13,23 @@
  </p>
 
 
+## Used Source
+
+<p align="center">
+  <a href="https://github.com/REAndroid/APKEditor"><img src="https://img.shields.io/badge/APKEditor-REAndroid%20(%40kikfox)-blue?style=for-the-badge&logo=github" alt="APKEditor"/></a>
+</p>
+
+<p align="center">
+  <a href="https://mvnrepository.com/artifact/com.android.tools.build/apksig"><img src="https://img.shields.io/badge/ApkSig-Android%20Tools%20Build-green?style=for-the-badge&logo=apachemaven" alt="ApkSig"/></a>
+  <a href="https://github.com/iBotPeaches/Apktool"><img src="https://img.shields.io/badge/Apktool-Connor%20Tumbleson%20(%40iBotPeaches)-orange?style=for-the-badge&logo=github" alt="Apktool"/></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/google/smali"><img src="https://img.shields.io/badge/Dexlib2-Google%20(Open%20Source)-red?style=for-the-badge&logo=google" alt="Dexlib2"/></a>
+  <a href="https://github.com/AbhiTheModder/termux-scripts/blob/main/tgpatcher.py"><img src="https://img.shields.io/badge/TGPatcher-ABHI%20THE-orange?style=for-the-badge&logo=github" alt="TGPatcher"/><img src="https://img.shields.io/badge/MODDER-darkgreen?style=for-the-badge"/></a>
+</p>
+
+
 Installation Method
 -------
 **💢 Requirement PKG 💢**
